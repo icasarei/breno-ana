@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Breno & Ana Luisa - Nosso Casamento</title>
+    <title>Brenno & Ana Luisa - Nosso Casamento</title>
     <style>
         body {
             box-sizing: border-box;
@@ -51,7 +51,6 @@
         /* Hero Section */
         .hero {
             text-align: center;
-            padding: 3rem 0;
             margin-bottom: 4rem;
         }
 
@@ -59,7 +58,10 @@
             width: 200px;
             height: 200px;
             border-radius: 50%;
-            background: linear-gradient(135deg, #d4af37, #f4e4bc);
+            background-image: url("IMG_0479.jpg");
+            background-size: cover;       /* cobre todo o círculo */
+            background-position: center;  /* centraliza a foto */
+            background-repeat: no-repeat; /* evita repetição */
             margin: 0 auto 2rem;
             display: flex;
             align-items: center;
@@ -290,7 +292,7 @@
 
         .gifts-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(301px, 1fr));
             gap: 2rem;
             margin-top: 2rem;
         }
@@ -304,6 +306,7 @@
             border: 1px solid rgba(212, 175, 55, 0.2);
             position: relative;
             overflow: hidden;
+            max-width: 239px;
         }
 
         .gift-card::before {
@@ -339,6 +342,7 @@
             margin-bottom: 1rem;
             font-weight: 400;
             line-height: 1.3;
+            min-height: 59px;
         }
 
         .gift-description {
@@ -346,12 +350,18 @@
             line-height: 1.6;
             margin-bottom: 1.5rem;
             font-size: 1rem;
+            min-height: 103px;
         }
 
         .gift-icon {
-            font-size: 2.5rem;
+            display: flex;
+            align-items: center;
             margin-bottom: 1rem;
-            display: block;
+        }
+
+        .gift-icon img {
+            width: 238px;
+            height: 158.66px;
         }
 
         .gift-price {
@@ -685,9 +695,9 @@
             </nav>
 
             <section class="hero fade-in">
-                <div class="couple-photo">💕</div>
-                <h1 class="couple-names">Breno & Ana Luisa</h1>
-                <p class="wedding-date">15 de Junho de 2024</p>
+                <div class="couple-photo"></div>
+                <h1 class="couple-names">Brenno & Ana Luisa</h1>
+                <p class="wedding-date">01 de Novembro de 2025</p>
                 <div class="decorative-line"></div>
                 <p class="love-quote">
                     "O amor não consiste em olhar um para o outro, mas sim em olhar juntos na mesma direção."
@@ -696,93 +706,39 @@
 
             <section class="info-section fade-in">
                 <h2 class="section-title">
-                    <span class="section-icon">💒</span>
                     Detalhes do Casamento
                 </h2>
                 
                 <div class="info-grid">
                     <div class="info-card">
                         <h3>📅 Data</h3>
-                        <p><span class="highlight">15 de Junho de 2024</span></p>
+                        <p><span class="highlight">01 de Novembro de 2025</span></p>
                         <p>Sábado</p>
                     </div>
                     
                     <div class="info-card">
                         <h3>🕐 Horário</h3>
-                        <p>Cerimônia: <span class="highlight">16h00</span></p>
-                        <p>Festa: <span class="highlight">18h00</span></p>
+                        <p>Cerimônia: <span class="highlight">10h30</span></p>
+                        <p>Festa: <span class="highlight">13h00</span></p>
                     </div>
                     
-                    <div class="info-card">
-                        <h3>📍 Local</h3>
-                        <p><span class="highlight">Igreja São José</span></p>
-                        <p>Rua das Flores, 123</p>
-                        <p>Centro - São Paulo/SP</p>
-                    </div>
-                    
-                    <div class="info-card">
-                        <h3>🎉 Recepção</h3>
-                        <p><span class="highlight">Salão Elegance</span></p>
-                        <p>Av. Principal, 456</p>
-                        <p>Jardins - São Paulo/SP</p>
-                    </div>
-                </div>
-            </section>
-
-            <section class="info-section fade-in">
-                <h2 class="section-title">
-                    <span class="section-icon">⏰</span>
-                    Cronograma do Dia
-                </h2>
-                
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-content">
-                            <div class="timeline-time">15h30</div>
-                            <div class="timeline-event">Chegada dos convidados</div>
+                    <a href="https://www.google.com/maps/place/Parish+St.+Peter+of+Alcantara/data=!4m2!3m1!1s0x0:0x367487f3756d4099?sa=X&ved=1t:2428&ictx=111" target="_blank" style="text-decoration: none;">
+                        <div class="info-card">
+                            <h3>📍 Local</h3>
+                            <p><span class="highlight">Igreja São Pedro de Alcântara</span></p>
+                            <p>St. de Habitações Individuais Sul EQI 7/9</p>
+                            <p>Lago Sul, Brasília/DF</p>
                         </div>
-                        <div class="timeline-dot"></div>
-                    </div>
+                    </a>
                     
-                    <div class="timeline-item">
-                        <div class="timeline-content">
-                            <div class="timeline-time">16h00</div>
-                            <div class="timeline-event">Cerimônia religiosa</div>
+                    <a href="https://maps.app.goo.gl/qzwpLTv669tio1im7" target="_blank" style="text-decoration: none;">
+                        <div class="info-card">
+                            <h3>🎉 Recepção</h3>
+                            <p><span class="highlight">Casa de Evento dos Claretianos</span></p>
+                            <p>SMPW QD 04 CONJ 07 LOTE 02</p>
+                            <p>Park Way, Brasília/DF</p>
                         </div>
-                        <div class="timeline-dot"></div>
-                    </div>
-                    
-                    <div class="timeline-item">
-                        <div class="timeline-content">
-                            <div class="timeline-time">17h00</div>
-                            <div class="timeline-event">Sessão de fotos</div>
-                        </div>
-                        <div class="timeline-dot"></div>
-                    </div>
-                    
-                    <div class="timeline-item">
-                        <div class="timeline-content">
-                            <div class="timeline-time">18h00</div>
-                            <div class="timeline-event">Início da festa</div>
-                        </div>
-                        <div class="timeline-dot"></div>
-                    </div>
-                    
-                    <div class="timeline-item">
-                        <div class="timeline-content">
-                            <div class="timeline-time">19h00</div>
-                            <div class="timeline-event">Jantar</div>
-                        </div>
-                        <div class="timeline-dot"></div>
-                    </div>
-                    
-                    <div class="timeline-item">
-                        <div class="timeline-content">
-                            <div class="timeline-time">21h00</div>
-                            <div class="timeline-event">Valsa dos noivos</div>
-                        </div>
-                        <div class="timeline-dot"></div>
-                    </div>
+                    </a>
                 </div>
             </section>
 
@@ -812,50 +768,332 @@
 
             <main class="gifts-grid">
                 <article class="gift-card">
-                    <span class="gift-number">Presente 1</span>
-                    <div class="gift-icon">🐬</div>
-                    <h2 class="gift-title">Passeio com Golfinhos</h2>
+                    <div class="gift-icon">
+                        <img src="istockphoto-177031582-612x612.jpg"/>
+                    </div>
+                    <h2 class="gift-title">Coco gelado para os noivos</h2>
                     <p class="gift-description">
-                        Uma experiência mágica nadando com golfinhos em águas cristalinas. 
-                        Momentos únicos que ficarão para sempre em nossa memória.
+                        Um coco gelado para os noivos se refrescarem e aproveitarem o dia ensolarado.
                     </p>
                     <div class="gift-price">
-                        <span class="price-value">R$ 450,00</span>
+                        <span class="price-value">R$ 30,00</span>
                         <button class="contribute-btn">Presentear</button>
                     </div>
                 </article>
 
                 <article class="gift-card">
-                    <span class="gift-number">Presente 2</span>
-                    <div class="gift-icon">🏜️</div>
-                    <h2 class="gift-title">Passeio nas Dunas</h2>
+                    <div class="gift-icon">
+                        <img src="pele-queimada-sol-descamacao-neoderme-curitiba.png"/>
+                    </div>
+                    <h2 class="gift-title">Creme pós-sol para salvar do vermelhão</h2>
                     <p class="gift-description">
-                        Aventura emocionante pelas dunas de areia com buggy e sandboard. 
-                        Adrenalina e paisagens deslumbrantes ao pôr do sol.
+                        Um creme pós-sol especial para que os noivos fiquem com a pele perfeita após um dia de sol.
                     </p>
                     <div class="gift-price">
-                        <span class="price-value">R$ 320,00</span>
+                        <span class="price-value">R$ 35,00</span>
                         <button class="contribute-btn">Presentear</button>
                     </div>
                 </article>
 
                 <article class="gift-card">
-                    <span class="gift-number">Presente 3</span>
-                    <div class="gift-icon">🚁</div>
-                    <h2 class="gift-title">Voo de Helicóptero</h2>
+                    <div class="gift-icon">
+                        <img src="caipirinha_with_lime.jpg"/>
+                    </div>
+                    <h2 class="gift-title">2 caipirinhas à beira-mar</h2>
                     <p class="gift-description">
-                        Vista panorâmica da cidade e praias do alto. Uma perspectiva única 
-                        e romântica para celebrar nosso amor nas alturas.
+                        Uma experiência mágica à beira-mar, com 2 caipirinhas refrescantes para brindar.
                     </p>
                     <div class="gift-price">
-                        <span class="price-value">R$ 680,00</span>
+                        <span class="price-value">R$ 40,00</span>
                         <button class="contribute-btn">Presentear</button>
                     </div>
                 </article>
 
                 <article class="gift-card">
-                    <span class="gift-number">Presente 4</span>
-                    <div class="gift-icon">🍷</div>
+                    <div class="gift-icon">
+                        <img src="images (2).jpg"/>
+                    </div>
+                    <h2 class="gift-title">Caipirinhas extras para os noivos não brigarem</h2>
+                    <p class="gift-description">
+                        Um brinde especial com caipirinhas para garantir a harmonia entre os noivos.
+                    </p>
+                    <div class="gift-price">
+                        <span class="price-value">R$ 40,00</span>
+                        <button class="contribute-btn">Presentear</button>
+                    </div>
+                </article>
+
+                <article class="gift-card">
+                    <div class="gift-icon">
+                        <img src="Recipientes-com-sorvete-artesanal-1.jpg"/>
+                    </div>
+                    <h2 class="gift-title">Sorvetes artesanais para refrescar</h2>
+                    <p class="gift-description">
+                        Um sorvete artesanal refrescante para os dias quentes de verão.
+                    </p>
+                    <div class="gift-price">
+                        <span class="price-value">R$ 40,00</span>
+                        <button class="contribute-btn">Presentear</button>
+                    </div>
+                </article>
+
+                <article class="gift-card">
+                    <div class="gift-icon">
+                        <img src="youtube-music-no-celular-700x394.jpg"/>
+                    </div>
+                    <h2 class="gift-title">Playlist premium</h2>
+                    <p class="gift-description">
+                        Uma playlist cuidadosamente selecionada para criar a trilha sonora perfeita da lua de mel.
+                    </p>
+                    <div class="gift-price">
+                        <span class="price-value">R$ 40,00</span>
+                        <button class="contribute-btn">Presentear</button>
+                    </div>
+                </article>
+
+                <article class="gift-card">
+                    <div class="gift-icon">
+                        <img src="D_NQ_NP_685581-MLB76288576261_052024-O-chapeu-palha-desfiado-festa-junina-caipira-arraial-quadrilha.webp"/>
+                    </div>
+                    <h2 class="gift-title">Chapéu de palha estiloso</h2>
+                    <p class="gift-description">
+                        Um chapéu de palha estiloso para proteger os noivos do sol e garantir fotos incríveis.
+                    </p>
+                    <div class="gift-price">
+                        <span class="price-value">R$ 50,00</span>
+                        <button class="contribute-btn">Presentear</button>
+                    </div>
+                </article>
+
+                <article class="gift-card">
+                    <div class="gift-icon">
+                        <img src="bandeja-de-cafe-da-manha-na-piscina-cafe-da-manha-flutuante-em-smoothies-de-hotel-de-luxo-e-tigela-de-smoothie-de-prato-de-frutas-a-beira-da-piscina-do-hotel-dieta-de-verao-exotica-estilo-de-vida-d.jpg"/>
+                    </div>
+                    <h2 class="gift-title">Cesta de frutas tropicais no hotel</h2>
+                    <p class="gift-description">
+                        Uma seleção de frutas tropicais frescas para os noivos desfrutarem durante a estadia.
+                    </p>
+                    <div class="gift-price">
+                        <span class="price-value">R$ 60,00</span>
+                        <button class="contribute-btn">Presentear</button>
+                    </div>
+                </article>
+
+                <article class="gift-card">
+                    <div class="gift-icon">
+                        <img src="cadeira-de-praia-de-alumínio-com-assento-azul-e-guarda-sol-laranja_pexels_c-a3325.webp"/>
+                    </div>
+                    <h2 class="gift-title">Cadeira e guarda-sol na praia por um dia</h2>
+                    <p class="gift-description">
+                        Um dia de relaxamento na praia com cadeira e guarda-sol para os noivos.
+                    </p>
+                    <div class="gift-price">
+                        <span class="price-value">R$ 70,00</span>
+                        <button class="contribute-btn">Presentear</button>
+                    </div>
+                </article>
+
+                <article class="gift-card">
+                    <div class="gift-icon">
+                        <img src="images.jpg"/>
+                    </div>
+                    <h2 class="gift-title">Banana boat para o casal</h2>
+                    <p class="gift-description">
+                        Um passeio divertido de banana boat para o casal. Uma experiência emocionante nas águas cristalinas.
+                    </p>
+                    <div class="gift-price">
+                        <span class="price-value">R$ 70,00</span>
+                        <button class="contribute-btn">Presentear</button>
+                    </div>
+                </article>
+
+                <article class="gift-card">
+                    <div class="gift-icon">
+                        <img src="lugares-incriveis-para-ver-o-por-do-sol-no-brasil-pedra-do-arpoador-conexao123.webp"/>
+                    </div>
+                    <h2 class="gift-title">Passeio para ver o pôr do sol</h2>
+                    <p class="gift-description">
+                        Um passeio romântico para ver o pôr do sol, com uma vista deslumbrante do mar.
+                    </p>
+                    <div class="gift-price">
+                        <span class="price-value">R$ 80,00</span>
+                        <button class="contribute-btn">Presentear</button>
+                    </div>
+                </article>
+
+                <article class="gift-card">
+                    <div class="gift-icon">
+                        <img src="2089047770-petiscosdepraia.webp"/>
+                    </div>
+                    <h2 class="gift-title">Petiscos de praia</h2>
+                    <p class="gift-description">
+                        Um lanche delicioso com petiscos de praia para aproveitar o dia.
+                    </p>
+                    <div class="gift-price">
+                        <span class="price-value">R$ 80,00</span>
+                        <button class="contribute-btn">Presentear</button>
+                    </div>
+                </article>
+
+                <article class="gift-card">
+                    <div class="gift-icon">
+                        <img src="images (1).jpg"/>
+                    </div>
+                    <h2 class="gift-title">Café da manhã especial na pousada</h2>
+                    <p class="gift-description">
+                        Um café da manhã delicioso e romântico na pousada, com vista para o mar.
+                    </p>
+                    <div class="gift-price">
+                        <span class="price-value">R$ 90,00</span>
+                        <button class="contribute-btn">Presentear</button>
+                    </div>
+                </article>
+
+                <article class="gift-card">
+                    <div class="gift-icon">
+                        <img src="depositphotos_81184444-stock-photo-two-glasses-of-chilled-white.jpg"/>
+                    </div>
+                    <h2 class="gift-title">Vinho branco gelado para celebrar</h2>
+                    <p class="gift-description">
+                        Uma seleção de vinhos brancos gelados para brindar momentos especiais.
+                    </p>
+                    <div class="gift-price">
+                        <span class="price-value">R$ 90,00</span>
+                        <button class="contribute-btn">Presentear</button>
+                    </div>
+                </article>
+
+                <article class="gift-card">
+                    <div class="gift-icon">
+                        <img src="krzysztof-kowalik-6QFR9t4pDIM-unsplash.jpg"/>
+                    </div>
+                    <h2 class="gift-title">Stand up paddle para duas pessoas</h2>
+                    <p class="gift-description">
+                        Um passeio divertido de stand up paddle para duas pessoas, explorando as águas calmas.
+                    </p>
+                    <div class="gift-price">
+                        <span class="price-value">R$ 100,00</span>
+                        <button class="contribute-btn">Presentear</button>
+                    </div>
+                </article>
+
+                <article class="gift-card">
+                    <div class="gift-icon">
+                        <img src="7d.jpg"/>
+                    </div>
+                    <h2 class="gift-title">Mergulho com snorkel</h2>
+                    <p class="gift-description">
+                        Um mergulho emocionante com snorkel para explorar a vida marinha.
+                    </p>
+                    <div class="gift-price">
+                        <span class="price-value">R$ 120,00</span>
+                        <button class="contribute-btn">Presentear</button>
+                    </div>
+                </article>
+
+                <article class="gift-card">
+                    <div class="gift-icon">
+                        <img src="depositphotos_113849714-stock-photo-beach-with-instant-photos-in.jpg"/>
+                    </div>
+                    <h2 class="gift-title">Kit de fotos instantâneas</h2>
+                    <p class="gift-description">
+                        Um kit de fotos instantâneas para capturar e eternizar os melhores momentos do casamento.
+                    </p>
+                    <div class="gift-price">
+                        <span class="price-value">R$ 120,00</span>
+                        <button class="contribute-btn">Presentear</button>
+                    </div>
+                </article>
+
+                <article class="gift-card">
+                    <div class="gift-icon">
+                        <img src="fotos-para-site5.png"/>
+                    </div>
+                    <h2 class="gift-title">Massagem relaxante para o casal</h2>
+                    <p class="gift-description">
+                        Uma massagem relaxante para o casal, aliviando o estresse e renovando as energias.
+                    </p>
+                    <div class="gift-price">
+                        <span class="price-value">R$ 150,00</span>
+                        <button class="contribute-btn">Presentear</button>
+                    </div>
+                </article>
+
+                <article class="gift-card">
+                    <div class="gift-icon">
+                        <img src="40099169275_909f858dc3_c.jpg"/>
+                    </div>
+                    <h2 class="gift-title">Almoço de frutos do mar</h2>
+                    <p class="gift-description">
+                        Um almoço delicioso com frutos do mar frescos, em um restaurante à beira-mar.
+                    </p>
+                    <div class="gift-price">
+                        <span class="price-value">R$ 160,00</span>
+                        <button class="contribute-btn">Presentear</button>
+                    </div>
+                </article>
+
+                <article class="gift-card">
+                    <div class="gift-icon">
+                        <img src="Destaque-03-Passeio-de-Barco-em-Fernando-de-Noronha-PE-1.webp"/>
+                    </div>
+                    <h2 class="gift-title">Passeio de barco</h2>
+                    <p class="gift-description">
+                        Um passeio relaxante de barco pelas águas cristalinas, com direito a um brinde especial.
+                    </p>
+                    <div class="gift-price">
+                        <span class="price-value">R$ 180,00</span>
+                        <button class="contribute-btn">Presentear</button>
+                    </div>
+                </article>
+
+                <article class="gift-card">
+                    <div class="gift-icon">
+                        <img src="um-jantar-romantico-na-praia-ambiente-a-luz-de-velas-flores-desabrochando-por-do-sol-skylove-no-ar_896558-15498.jpg"/>
+                    </div>
+                    <h2 class="gift-title">Jantar romântico à luz de velas na areia</h2>
+                    <p class="gift-description">
+                        Um jantar romântico à luz de velas na areia, com uma vista deslumbrante do pôr do sol.
+                    </p>
+                    <div class="gift-price">
+                        <span class="price-value">R$ 200,00</span>
+                        <button class="contribute-btn">Presentear</button>
+                    </div>
+                </article>
+
+                <article class="gift-card">
+                    <div class="gift-icon">
+                        <img src="Buggy norte II (11).jpg"/>
+                    </div>
+                    <h2 class="gift-title">Aluguel de buggy para explorar as dunas</h2>
+                    <p class="gift-description">
+                        Um passeio emocionante de buggy pelas dunas, com paisagens deslumbrantes.
+                    </p>
+                    <div class="gift-price">
+                        <span class="price-value">R$ 250,00</span>
+                        <button class="contribute-btn">Presentear</button>
+                    </div>
+                </article>
+
+                <article class="gift-card">
+                    <div class="gift-icon">
+                        <img src="image-29-1024x732.png"/>
+                    </div>
+                    <h2 class="gift-title">Show Cultural</h2>
+                    <p class="gift-description">
+                        Noite cultural com espetáculo de dança típica e música local. 
+                        Imersão na cultura e tradições do nosso destino.
+                    </p>
+                    <div class="gift-price">
+                        <span class="price-value">R$ 280,00</span>
+                        <button class="contribute-btn">Presentear</button>
+                    </div>
+                </article>
+
+                <article class="gift-card">
+                    <div class="gift-icon">
+                        <img src="degustacao-de-vinhos-tintos.png"/>
+                    </div>
                     <h2 class="gift-title">Degustação de Vinhos</h2>
                     <p class="gift-description">
                         Noite especial em vinícola com degustação de vinhos premium 
@@ -868,8 +1106,23 @@
                 </article>
 
                 <article class="gift-card">
-                    <span class="gift-number">Presente 5</span>
-                    <div class="gift-icon">🏖️</div>
+                    <div class="gift-icon">
+                        <img src="passeio-com-golfinhos-1.webp"/>
+                    </div>
+                    <h2 class="gift-title">Passeio com Golfinhos</h2>
+                    <p class="gift-description">
+                        Uma experiência mágica nadando com golfinhos em águas cristalinas.
+                    </p>
+                    <div class="gift-price">
+                        <span class="price-value">R$ 450,00</span>
+                        <button class="contribute-btn">Presentear</button>
+                    </div>
+                </article>
+
+                <article class="gift-card">
+                    <div class="gift-icon">
+                        <img src="pratagyspaSITE.jpg"/>
+                    </div>
                     <h2 class="gift-title">Spa na Praia</h2>
                     <p class="gift-description">
                         Dia de relaxamento completo com massagens e tratamentos 
@@ -882,15 +1135,16 @@
                 </article>
 
                 <article class="gift-card">
-                    <span class="gift-number">Presente 6</span>
-                    <div class="gift-icon">🎭</div>
-                    <h2 class="gift-title">Show Cultural</h2>
+                    <div class="gift-icon">
+                        <img src="Passeio de Helicóptero em Pipa.jpeg"/>
+                    </div>
+                    <h2 class="gift-title">Voo de Helicóptero</h2>
                     <p class="gift-description">
-                        Noite cultural com espetáculo de dança típica e música local. 
-                        Imersão na cultura e tradições do nosso destino.
+                        Vista panorâmica da cidade e praias do alto. Uma perspectiva única 
+                        e romântica para celebrar nosso amor nas alturas.
                     </p>
                     <div class="gift-price">
-                        <span class="price-value">R$ 280,00</span>
+                        <span class="price-value">R$ 680,00</span>
                         <button class="contribute-btn">Presentear</button>
                     </div>
                 </article>
