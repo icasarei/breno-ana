@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de Presentes - Casamento</title>
+    <title>Breno & Ana Luisa - Nosso Casamento</title>
     <style>
         body {
             box-sizing: border-box;
@@ -16,37 +16,276 @@
         }
 
         .container {
-            max-width: 900px;
+            max-width: 1000px;
             margin: 0 auto;
             padding: 2rem;
         }
 
-        .header {
+        /* Navegação */
+        .nav {
+            display: flex;
+            justify-content: center;
+            padding: 1rem 0;
+            margin-bottom: 2rem;
+        }
+
+        .nav-btn {
+            background: linear-gradient(135deg, #d4af37, #f4e4bc);
+            color: #5a4a3a;
+            border: none;
+            padding: 0.8rem 2rem;
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .nav-btn:hover {
+            background: linear-gradient(135deg, #f4e4bc, #d4af37);
+            transform: scale(1.05);
+        }
+
+        /* Hero Section */
+        .hero {
             text-align: center;
-            margin-bottom: 3rem;
-            padding: 2rem 0;
+            padding: 3rem 0;
+            margin-bottom: 4rem;
         }
 
-        .title {
-            font-size: 2.5rem;
+        .couple-photo {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #d4af37, #f4e4bc);
+            margin: 0 auto 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            box-shadow: 0 10px 30px rgba(139, 115, 85, 0.2);
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .couple-names {
+            font-size: 3.5rem;
             color: #8b7355;
-            margin-bottom: 0.5rem;
+            margin-bottom: 1rem;
             font-weight: 300;
-            letter-spacing: 2px;
+            letter-spacing: 3px;
         }
 
-        .subtitle {
-            font-size: 1.1rem;
-            color: #a0916b;
+        .wedding-date {
+            font-size: 1.3rem;
+            color: #d4af37;
             font-style: italic;
             margin-bottom: 2rem;
         }
 
         .decorative-line {
-            width: 100px;
-            height: 2px;
+            width: 150px;
+            height: 3px;
             background: linear-gradient(90deg, transparent, #d4af37, transparent);
+            margin: 0 auto 2rem;
+        }
+
+        .love-quote {
+            font-size: 1.2rem;
+            color: #8b7355;
+            font-style: italic;
+            max-width: 600px;
             margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* Seções de Informação */
+        .info-section {
+            background: white;
+            border-radius: 20px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 8px 25px rgba(139, 115, 85, 0.1);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .info-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #d4af37, #f4e4bc, #d4af37);
+        }
+
+        .section-title {
+            font-size: 2rem;
+            color: #8b7355;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .section-icon {
+            font-size: 2.5rem;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .info-card {
+            background: rgba(212, 175, 55, 0.1);
+            padding: 1.5rem;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .info-card h3 {
+            color: #8b7355;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .info-card p {
+            color: #7a6b5d;
+            line-height: 1.6;
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight {
+            color: #d4af37;
+            font-weight: 600;
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding: 2rem 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(180deg, #d4af37, #f4e4bc, #d4af37);
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .timeline-item:nth-child(odd) {
+            flex-direction: row;
+        }
+
+        .timeline-item:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .timeline-content {
+            background: rgba(212, 175, 55, 0.1);
+            padding: 1.5rem;
+            border-radius: 15px;
+            width: 45%;
+            position: relative;
+        }
+
+        .timeline-time {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #d4af37;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-event {
+            color: #8b7355;
+            font-size: 1rem;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: 50%;
+            width: 20px;
+            height: 20px;
+            background: #d4af37;
+            border-radius: 50%;
+            transform: translateX(-50%);
+            border: 4px solid white;
+            box-shadow: 0 2px 10px rgba(212, 175, 55, 0.3);
+        }
+
+        /* Call to Action */
+        .cta-section {
+            text-align: center;
+            padding: 3rem 0;
+        }
+
+        .cta-title {
+            font-size: 2rem;
+            color: #8b7355;
+            margin-bottom: 1rem;
+        }
+
+        .cta-description {
+            font-size: 1.1rem;
+            color: #7a6b5d;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-btn {
+            background: linear-gradient(135deg, #d4af37, #f4e4bc);
+            color: #5a4a3a;
+            border: none;
+            padding: 1rem 3rem;
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+        }
+
+        .cta-btn:hover {
+            background: linear-gradient(135deg, #f4e4bc, #d4af37);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+        }
+
+        /* Página de Presentes */
+        .gifts-page {
+            display: none;
+        }
+
+        .gifts-page.active {
+            display: block;
         }
 
         .gifts-grid {
@@ -145,14 +384,6 @@
         .contribute-btn:hover {
             background: linear-gradient(135deg, #f4e4bc, #d4af37);
             transform: scale(1.05);
-        }
-
-        .footer {
-            text-align: center;
-            margin-top: 4rem;
-            padding: 2rem;
-            color: #a0916b;
-            font-style: italic;
         }
 
         /* Modal de Pagamento */
@@ -396,8 +627,26 @@
                 padding: 1rem;
             }
             
-            .title {
-                font-size: 2rem;
+            .couple-names {
+                font-size: 2.5rem;
+            }
+            
+            .timeline::before {
+                left: 20px;
+            }
+            
+            .timeline-item {
+                flex-direction: column !important;
+                align-items: flex-start;
+                padding-left: 40px;
+            }
+            
+            .timeline-content {
+                width: 100%;
+            }
+            
+            .timeline-dot {
+                left: 20px;
             }
             
             .gifts-grid {
@@ -410,21 +659,16 @@
             }
         }
 
-        /* Animação suave para entrada dos cards */
-        .gift-card {
-            animation: fadeInUp 0.6s ease forwards;
-            opacity: 0;
-            transform: translateY(30px);
+        /* Animações */
+        .fade-in {
+            animation: fadeIn 0.8s ease forwards;
         }
 
-        .gift-card:nth-child(1) { animation-delay: 0.1s; }
-        .gift-card:nth-child(2) { animation-delay: 0.2s; }
-        .gift-card:nth-child(3) { animation-delay: 0.3s; }
-        .gift-card:nth-child(4) { animation-delay: 0.4s; }
-        .gift-card:nth-child(5) { animation-delay: 0.5s; }
-        .gift-card:nth-child(6) { animation-delay: 0.6s; }
-
-        @keyframes fadeInUp {
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -433,102 +677,229 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <header class="header">
-            <h1 class="title">Lista de Presentes</h1>
-            <p class="subtitle">Experiências inesquecíveis para nossa lua de mel</p>
-            <div class="decorative-line"></div>
-        </header>
+    <!-- Página Inicial -->
+    <div class="home-page" id="homePage">
+        <div class="container">
+            <nav class="nav">
+                <button class="nav-btn" id="showGiftsBtn">Ver Lista de Presentes</button>
+            </nav>
 
-        <main class="gifts-grid">
-            <article class="gift-card">
-                <span class="gift-number">Presente 1</span>
-                <div class="gift-icon">🐬</div>
-                <h2 class="gift-title">Passeio com Golfinhos</h2>
-                <p class="gift-description">
-                    Uma experiência mágica nadando com golfinhos em águas cristalinas. 
-                    Momentos únicos que ficarão para sempre em nossa memória.
+            <section class="hero fade-in">
+                <div class="couple-photo">💕</div>
+                <h1 class="couple-names">Breno & Ana Luisa</h1>
+                <p class="wedding-date">15 de Junho de 2024</p>
+                <div class="decorative-line"></div>
+                <p class="love-quote">
+                    "O amor não consiste em olhar um para o outro, mas sim em olhar juntos na mesma direção."
                 </p>
-                <div class="gift-price">
-                    <span class="price-value">R$ 450,00</span>
-                    <button class="contribute-btn">Presentear</button>
-                </div>
-            </article>
+            </section>
 
-            <article class="gift-card">
-                <span class="gift-number">Presente 2</span>
-                <div class="gift-icon">🏜️</div>
-                <h2 class="gift-title">Passeio nas Dunas</h2>
-                <p class="gift-description">
-                    Aventura emocionante pelas dunas de areia com buggy e sandboard. 
-                    Adrenalina e paisagens deslumbrantes ao pôr do sol.
+            <section class="info-section fade-in">
+                <h2 class="section-title">
+                    <span class="section-icon">💒</span>
+                    Detalhes do Casamento
+                </h2>
+                
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3>📅 Data</h3>
+                        <p><span class="highlight">15 de Junho de 2024</span></p>
+                        <p>Sábado</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h3>🕐 Horário</h3>
+                        <p>Cerimônia: <span class="highlight">16h00</span></p>
+                        <p>Festa: <span class="highlight">18h00</span></p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h3>📍 Local</h3>
+                        <p><span class="highlight">Igreja São José</span></p>
+                        <p>Rua das Flores, 123</p>
+                        <p>Centro - São Paulo/SP</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h3>🎉 Recepção</h3>
+                        <p><span class="highlight">Salão Elegance</span></p>
+                        <p>Av. Principal, 456</p>
+                        <p>Jardins - São Paulo/SP</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="info-section fade-in">
+                <h2 class="section-title">
+                    <span class="section-icon">⏰</span>
+                    Cronograma do Dia
+                </h2>
+                
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-time">15h30</div>
+                            <div class="timeline-event">Chegada dos convidados</div>
+                        </div>
+                        <div class="timeline-dot"></div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-time">16h00</div>
+                            <div class="timeline-event">Cerimônia religiosa</div>
+                        </div>
+                        <div class="timeline-dot"></div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-time">17h00</div>
+                            <div class="timeline-event">Sessão de fotos</div>
+                        </div>
+                        <div class="timeline-dot"></div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-time">18h00</div>
+                            <div class="timeline-event">Início da festa</div>
+                        </div>
+                        <div class="timeline-dot"></div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-time">19h00</div>
+                            <div class="timeline-event">Jantar</div>
+                        </div>
+                        <div class="timeline-dot"></div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-time">21h00</div>
+                            <div class="timeline-event">Valsa dos noivos</div>
+                        </div>
+                        <div class="timeline-dot"></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="cta-section fade-in">
+                <h2 class="cta-title">Sua Presença é Nosso Maior Presente!</h2>
+                <p class="cta-description">
+                    Mas se desejar contribuir para nossa lua de mel dos sonhos, 
+                    preparamos uma lista especial de experiências inesquecíveis.
                 </p>
-                <div class="gift-price">
-                    <span class="price-value">R$ 320,00</span>
-                    <button class="contribute-btn">Presentear</button>
-                </div>
-            </article>
+                <button class="cta-btn" id="viewGiftsBtn">Ver Lista de Presentes</button>
+            </section>
+        </div>
+    </div>
 
-            <article class="gift-card">
-                <span class="gift-number">Presente 3</span>
-                <div class="gift-icon">🚁</div>
-                <h2 class="gift-title">Voo de Helicóptero</h2>
-                <p class="gift-description">
-                    Vista panorâmica da cidade e praias do alto. Uma perspectiva única 
-                    e romântica para celebrar nosso amor nas alturas.
-                </p>
-                <div class="gift-price">
-                    <span class="price-value">R$ 680,00</span>
-                    <button class="contribute-btn">Presentear</button>
-                </div>
-            </article>
+    <!-- Página de Presentes -->
+    <div class="gifts-page" id="giftsPage">
+        <div class="container">
+            <nav class="nav">
+                <button class="nav-btn" id="backHomeBtn">Voltar ao Início</button>
+            </nav>
 
-            <article class="gift-card">
-                <span class="gift-number">Presente 4</span>
-                <div class="gift-icon">🍷</div>
-                <h2 class="gift-title">Degustação de Vinhos</h2>
-                <p class="gift-description">
-                    Noite especial em vinícola com degustação de vinhos premium 
-                    e jantar harmonizado. Brinde ao nosso futuro juntos.
-                </p>
-                <div class="gift-price">
-                    <span class="price-value">R$ 380,00</span>
-                    <button class="contribute-btn">Presentear</button>
-                </div>
-            </article>
+            <header class="hero">
+                <h1 class="couple-names">Lista de Presentes</h1>
+                <p class="wedding-date">Experiências inesquecíveis para nossa lua de mel</p>
+                <div class="decorative-line"></div>
+            </header>
 
-            <article class="gift-card">
-                <span class="gift-number">Presente 5</span>
-                <div class="gift-icon">🏖️</div>
-                <h2 class="gift-title">Spa na Praia</h2>
-                <p class="gift-description">
-                    Dia de relaxamento completo com massagens e tratamentos 
-                    em resort à beira-mar. Paz e tranquilidade para dois.
-                </p>
-                <div class="gift-price">
-                    <span class="price-value">R$ 520,00</span>
-                    <button class="contribute-btn">Presentear</button>
-                </div>
-            </article>
+            <main class="gifts-grid">
+                <article class="gift-card">
+                    <span class="gift-number">Presente 1</span>
+                    <div class="gift-icon">🐬</div>
+                    <h2 class="gift-title">Passeio com Golfinhos</h2>
+                    <p class="gift-description">
+                        Uma experiência mágica nadando com golfinhos em águas cristalinas. 
+                        Momentos únicos que ficarão para sempre em nossa memória.
+                    </p>
+                    <div class="gift-price">
+                        <span class="price-value">R$ 450,00</span>
+                        <button class="contribute-btn">Presentear</button>
+                    </div>
+                </article>
 
-            <article class="gift-card">
-                <span class="gift-number">Presente 6</span>
-                <div class="gift-icon">🎭</div>
-                <h2 class="gift-title">Show Cultural</h2>
-                <p class="gift-description">
-                    Noite cultural com espetáculo de dança típica e música local. 
-                    Imersão na cultura e tradições do nosso destino.
-                </p>
-                <div class="gift-price">
-                    <span class="price-value">R$ 280,00</span>
-                    <button class="contribute-btn">Presentear</button>
-                </div>
-            </article>
-        </main>
+                <article class="gift-card">
+                    <span class="gift-number">Presente 2</span>
+                    <div class="gift-icon">🏜️</div>
+                    <h2 class="gift-title">Passeio nas Dunas</h2>
+                    <p class="gift-description">
+                        Aventura emocionante pelas dunas de areia com buggy e sandboard. 
+                        Adrenalina e paisagens deslumbrantes ao pôr do sol.
+                    </p>
+                    <div class="gift-price">
+                        <span class="price-value">R$ 320,00</span>
+                        <button class="contribute-btn">Presentear</button>
+                    </div>
+                </article>
 
-        <footer class="footer">
-            <p>Sua presença é o nosso maior presente! ❤️</p>
-        </footer>
+                <article class="gift-card">
+                    <span class="gift-number">Presente 3</span>
+                    <div class="gift-icon">🚁</div>
+                    <h2 class="gift-title">Voo de Helicóptero</h2>
+                    <p class="gift-description">
+                        Vista panorâmica da cidade e praias do alto. Uma perspectiva única 
+                        e romântica para celebrar nosso amor nas alturas.
+                    </p>
+                    <div class="gift-price">
+                        <span class="price-value">R$ 680,00</span>
+                        <button class="contribute-btn">Presentear</button>
+                    </div>
+                </article>
+
+                <article class="gift-card">
+                    <span class="gift-number">Presente 4</span>
+                    <div class="gift-icon">🍷</div>
+                    <h2 class="gift-title">Degustação de Vinhos</h2>
+                    <p class="gift-description">
+                        Noite especial em vinícola com degustação de vinhos premium 
+                        e jantar harmonizado. Brinde ao nosso futuro juntos.
+                    </p>
+                    <div class="gift-price">
+                        <span class="price-value">R$ 380,00</span>
+                        <button class="contribute-btn">Presentear</button>
+                    </div>
+                </article>
+
+                <article class="gift-card">
+                    <span class="gift-number">Presente 5</span>
+                    <div class="gift-icon">🏖️</div>
+                    <h2 class="gift-title">Spa na Praia</h2>
+                    <p class="gift-description">
+                        Dia de relaxamento completo com massagens e tratamentos 
+                        em resort à beira-mar. Paz e tranquilidade para dois.
+                    </p>
+                    <div class="gift-price">
+                        <span class="price-value">R$ 520,00</span>
+                        <button class="contribute-btn">Presentear</button>
+                    </div>
+                </article>
+
+                <article class="gift-card">
+                    <span class="gift-number">Presente 6</span>
+                    <div class="gift-icon">🎭</div>
+                    <h2 class="gift-title">Show Cultural</h2>
+                    <p class="gift-description">
+                        Noite cultural com espetáculo de dança típica e música local. 
+                        Imersão na cultura e tradições do nosso destino.
+                    </p>
+                    <div class="gift-price">
+                        <span class="price-value">R$ 280,00</span>
+                        <button class="contribute-btn">Presentear</button>
+                    </div>
+                </article>
+            </main>
+
+            <footer class="cta-section">
+                <p style="color: #a0916b; font-style: italic;">Sua presença é o nosso maior presente! ❤️</p>
+            </footer>
+        </div>
     </div>
 
     <!-- Modal de Pagamento -->
@@ -611,6 +982,29 @@
     </div>
 
     <script>
+        // Navegação entre páginas
+        const homePage = document.getElementById('homePage');
+        const giftsPage = document.getElementById('giftsPage');
+        const showGiftsBtn = document.getElementById('showGiftsBtn');
+        const viewGiftsBtn = document.getElementById('viewGiftsBtn');
+        const backHomeBtn = document.getElementById('backHomeBtn');
+
+        function showGiftsPage() {
+            homePage.style.display = 'none';
+            giftsPage.classList.add('active');
+            window.scrollTo(0, 0);
+        }
+
+        function showHomePage() {
+            giftsPage.classList.remove('active');
+            homePage.style.display = 'block';
+            window.scrollTo(0, 0);
+        }
+
+        showGiftsBtn.addEventListener('click', showGiftsPage);
+        viewGiftsBtn.addEventListener('click', showGiftsPage);
+        backHomeBtn.addEventListener('click', showHomePage);
+
         // Elementos do modal
         const paymentModal = document.getElementById('paymentModal');
         const closeModal = document.getElementById('closeModal');
@@ -783,23 +1177,31 @@
             }, 3000);
         });
 
-        // Efeito de hover suave nos cards
-        document.querySelectorAll('.gift-card').forEach(card => {
-            card.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateY(-8px) scale(1.02)';
-            });
-            
-            card.addEventListener('mouseleave', function() {
-                this.style.transform = 'translateY(0) scale(1)';
-            });
-        });
-
         // Fechar modal com ESC
         document.addEventListener('keydown', function(e) {
             if (e.key === 'Escape' && paymentModal.classList.contains('active')) {
                 closePaymentModal();
             }
         });
+
+        // Animações de entrada
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        // Observar elementos para animação
+        document.querySelectorAll('.info-section, .cta-section').forEach(el => {
+            observer.observe(el);
+        });
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'98673386c516df51',t:'MTc1OTEwNDAzNy4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'98677830c2dbf1fb',t:'MTc1OTEwNjg0OS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
